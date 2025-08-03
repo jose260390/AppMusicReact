@@ -1,19 +1,31 @@
+import { useState } from 'react';
 import Sidebar from './components/AppShell/Sidebar.jsx';
 import Header from './components/AppShell/Header.jsx';
 import PlayerBar from './components/Player/PlayerBar.jsx';
 import TrackList from './components/Track/TrackList.jsx';
 
 export default function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="h-dvh grid grid-rows-[auto_1fr_auto] md:grid-cols-[260px_1fr] md:grid-rows-[auto_1fr] bg-zinc-950 text-zinc-100">
-      {/* Sidebar (hidden on mobile) */}
+      {/* Sidebar mobile */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-black/50 md:hidden" onClick={() => setMobileMenuOpen(false)}>
+          <div className="absolute top-0 left-0 w-64 h-full bg-zinc-900 p-4">
+            <Sidebar />
+          </div>
+        </div>
+      )}
+
+      {/* Sidebar desktop */}
       <aside className="hidden md:block bg-zinc-900">
         <Sidebar />
       </aside>
 
       {/* Header */}
       <header className="col-start-1 md:col-start-2 sticky top-0 z-10 bg-zinc-950/70 backdrop-blur">
-        <Header />
+        <Header onMenuClick={() => setMobileMenuOpen(true)} />
       </header>
 
       {/* Main */}
@@ -22,7 +34,7 @@ export default function App() {
       </main>
 
       {/* Player */}
-      <footer className="md:col-span-2">
+      <footer className="md:col-span-2 sticky bottom-0">
         <PlayerBar />
       </footer>
     </div>
