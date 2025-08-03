@@ -10,9 +10,16 @@ export default function App() {
   return (
     <div className="h-dvh grid grid-rows-[auto_1fr_auto] md:grid-cols-[260px_1fr] md:grid-rows-[auto_1fr] bg-zinc-950 text-zinc-100">
       {/* Sidebar mobile */}
+      {/* Sidebar mobile */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 md:hidden" onClick={() => setMobileMenuOpen(false)}>
-          <div className="absolute top-0 left-0 w-64 h-full bg-zinc-900 p-4">
+        <div
+          className="fixed inset-0 z-50 bg-black/50 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div
+            className="absolute top-0 left-0 w-64 h-full bg-zinc-900 p-4 transform transition-transform duration-300 ease-in-out translate-x-0"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Sidebar />
           </div>
         </div>
