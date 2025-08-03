@@ -1,40 +1,33 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
+import Sidebar from './components/AppShell/Sidebar.jsx';
+import Header from './components/AppShell/Header.jsx';
+import PlayerBar from './components/Player/PlayerBar.jsx';
+import TrackList from './components/Track/TrackList.jsx';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 flex items-center justify-center">
-      <div className="text-center space-y-6">
-        <div className="flex items-center justify-center gap-6">
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="h-12 w-12" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="h-12 w-12" alt="React logo" />
-          </a>
-        </div>
+    <div className="h-dvh grid grid-rows-[auto_1fr_auto] md:grid-cols-[260px_1fr] md:grid-rows-[auto_1fr] bg-zinc-950 text-zinc-100">
+      {/* Sidebar (hidden on mobile) */}
+      <aside className="hidden md:block bg-zinc-900">
+        <Sidebar />
+      </aside>
 
-        <h1 className="text-4xl font-bold">App Music</h1>
-        <h2 className="text-2xl font-semibold text-purple-500">Lofi Player</h2>
+      {/* Header */}
+      <header className="col-start-1 md:col-start-2 sticky top-0 z-10 bg-zinc-950/70 backdrop-blur">
+        <Header />
+      </header>
 
-        <div>
-          <button
-            className="px-4 py-2 rounded bg-zinc-200 text-zinc-900"
-            onClick={() => setCount((c) => c + 1)}
-          >
-            count is {count}
-          </button>
-        </div>
+      {/* Main */}
+      <main className="p-4 md:col-start-2">
+        <TrackList />
+      </main>
 
-        <p className="text-sm text-zinc-400">
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+      {/* Player */}
+      <footer className="md:col-span-2">
+        <PlayerBar />
+      </footer>
     </div>
   );
 }
-
-export default App;
