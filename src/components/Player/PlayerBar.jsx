@@ -20,10 +20,8 @@ export default function PlayerBar() {
         {['⏮', '▶', '⏭'].map((icon, i) => (
           <button
             key={i}
-            className="transition-transform duration-150 hover:scale-110 hover:text-purple-400 focus:outline-none focus:scale-110 active:scale-95"
-            aria-label={
-              icon === '▶' ? 'Play/Pause' : icon === '⏮' ? 'Previous' : 'Next'
-            }
+            className="rounded transition-transform duration-150 hover:scale-110 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500/30 active:scale-95"
+            aria-label={icon === '▶' ? 'Play/Pause' : icon === '⏮' ? 'Previous' : 'Next'}
           >
             {icon}
           </button>
@@ -32,16 +30,16 @@ export default function PlayerBar() {
 
       {/* Right: progress (hidden on mobile) */}
       <div className="w-64 hidden md:block">
-        <div className="h-1 bg-zinc-800 rounded overflow-hidden">
+        <div className="h-1 bg-zinc-800/80 rounded overflow-hidden">
           <div
-            className="h-full w-1/3 bg-zinc-200 transition-all duration-300"
+            className="h-full w-1/3 bg-purple-400 transition-all duration-300"
             role="progressbar"
             aria-valuemin="0"
             aria-valuemax="100"
             aria-valuenow={33}
           />
         </div>
-        <div className="mt-1 flex justify-between text-[11px] text-zinc-400">
+        <div className="mt-1 flex justify-between text-[11px] text-zinc-400 tabular-nums">
           <span>1:02</span>
           <span>3:12</span>
         </div>
