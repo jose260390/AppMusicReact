@@ -1,20 +1,12 @@
-import TrackCard from './TrackCard.jsx';
-
-const MOCK = [
-  { id: '1', title: 'Midnight Coffee', artist: 'Lofi Collective' },
-  { id: '2', title: 'Window Rain', artist: 'Soft Beats' },
-  { id: '3', title: 'Late Night Study', artist: 'Chill Tapes' },
-];
-
-export default function TrackList() {
+export default function TrackCard({ cover, title, artist, duration }) {
   return (
-    <section className="max-w-3xl mx-auto">
-      <h2 className="text-lg font-semibold mb-3">Trending lofi</h2>
-      <div className="space-y-1">
-        {MOCK.map(t => (
-          <TrackCard key={t.id} title={t.title} artist={t.artist} />
-        ))}
+    <div className="grid grid-cols-[56px_1fr_auto] gap-3 items-center p-2 rounded hover:bg-zinc-900">
+      <img src={cover} alt={title} className="h-14 w-14 rounded object-cover" />
+      <div className="min-w-0">
+        <p className="truncate font-medium">{title}</p>
+        <p className="truncate text-sm text-zinc-400">{artist}</p>
       </div>
-    </section>
+      <span className="text-sm text-zinc-400">{duration}</span>
+    </div>
   );
 }

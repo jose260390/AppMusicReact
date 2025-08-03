@@ -1,12 +1,21 @@
-export default function TrackCard({ title = 'Track', artist = 'Artist' }) {
+import TrackCard from './TrackCard.jsx';
+import { tracks } from '../../data/tracks.js';
+
+export default function TrackList() {
   return (
-    <div className="grid grid-cols-[56px_1fr_auto] gap-3 items-center p-2 rounded hover:bg-zinc-900">
-      <div className="h-14 w-14 rounded bg-zinc-800" />
-      <div className="min-w-0">
-        <p className="truncate font-medium">{title}</p>
-        <p className="truncate text-sm text-zinc-400">{artist}</p>
+    <section className="max-w-3xl mx-auto">
+      <h2 className="text-lg font-semibold mb-3">Trending lofi</h2>
+      <div className="space-y-1">
+        {tracks.map((t) => (
+          <TrackCard
+            key={t.id}
+            cover={t.cover}
+            title={t.title}
+            artist={t.artist}
+            duration={t.duration}
+          />
+        ))}
       </div>
-      <span className="text-sm text-zinc-400">3:12</span>
-    </div>
+    </section>
   );
 }
