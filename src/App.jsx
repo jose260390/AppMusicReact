@@ -42,7 +42,7 @@ export default function App() {
           <TrackList />
         </section>
       </main>
-
+      
       {/* Player (sticky bottom on mobile, full width on desktop) */}
       <footer className="md:col-span-2 sticky bottom-0">
         <PlayerBar />
