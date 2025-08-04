@@ -9,12 +9,7 @@ export default function Header({ onMenuClick }) {
           aria-label="Open menu"
         >
           ☰
-        </button>
-
-        <input
-          placeholder="Search tracks"
-          className="w-full max-w-md bg-zinc-900 text-zinc-200 rounded px-3 py-2 outline-none border border-zinc-800 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30"
-        />
+        </button>    
       </div>
       {}
     </div>
