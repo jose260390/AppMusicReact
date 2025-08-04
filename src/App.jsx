@@ -38,7 +38,7 @@ export default function App() {
       {/* Main content */}
       <main className="p-4 md:col-start-2">
         <section className="max-w-3xl mx-auto">
-          <h2 className="text-lg font-semibold mb-3">Trending lofi</h2>
+          <h2 className="text-lg font-semibold mb-3">PlayList</h2>
           <TrackList />
         </section>
       </main>
