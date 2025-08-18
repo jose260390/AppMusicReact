@@ -22,10 +22,8 @@ Este proyecto es una aplicación web desarrollada con **React** y **Vite**, esti
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vercel](https://vercel.com/)
 
-## 📁 Estructura del proyecto
+## 🧾 Estructura del proyecto
 
-```bash
-AppMusicReact/
 ```
 src/
 ├── assets/                # Archivos multimedia como imágenes, íconos, etc.
@@ -38,13 +36,11 @@ src/
 │   └── Track/             # Elementos de las pistas
 │       ├── TrackCard.jsx
 │       └── TrackList.jsx
-├── data/ 
-    └── TrackList.jsx       # Archivo de datos de canciones
+├── data/                  # Archivo de datos de canciones
 ├── App.jsx
 ├── main.jsx
 ├── App.css
 ├── index.css
-```.config.js
 ```
 
 ## ▶️ Cómo ejecutar el proyecto localmente
