@@ -1,7 +1,7 @@
 # 🎵 App Music React - Lofi Player
 
 Creación de app de música para tarea final módulo 3 diplomado fullstack
-Este proyecto es una aplicación web desarrollada con **React** y **Vite**, estilizada con **Tailwind CSS**, que presenta una interfaz minimalista para reproducir música **lofi**. Solamente es la interfaz gráfica ya que la tarea final para el Diplomado de FullStack módulo 3 de Front End.
+Este proyecto es una aplicación web desarrollada con **React** y **Vite**, estilizada con **Tailwind CSS**, que presenta una interfaz minimalista para reproducir música **lofi**(Solo interfaz). Este proyecto solo es para fines educativos ya que es la tarea final del módulo 3 de front end para el diplomado FullStack.
 
 ## 🚀 Funcionalidades
 
