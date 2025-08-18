@@ -73,7 +73,7 @@ src/
 ## ☁️ Deploy
 
 El proyecto está desplegado en **Vercel**:  
-🔗 [https://appmusicreact.vercel.app](https://appmusicreact.vercel.app)
+🔗 [https://app-music-react-lyb8.vercel.app/](https://app-music-react-lyb8.vercel.app/)
 
 ## 🧑‍💻 Autor
 
