@@ -37,10 +37,12 @@ src/
 │       ├── TrackCard.jsx
 │       └── TrackList.jsx
 ├── data/                  # Archivo de datos de canciones
+│   └── track.js
 ├── App.jsx
 ├── main.jsx
 ├── App.css
 ├── index.css
+
 ```
 
 ## ▶️ Cómo ejecutar el proyecto localmente
