@@ -1,4 +1,3 @@
-// src/components/Player/PlayerBar.jsx
 export default function PlayerBar() {
   return (
     <div className="h-16 px-4 flex items-center justify-between bg-zinc-950 border-t border-zinc-800">
